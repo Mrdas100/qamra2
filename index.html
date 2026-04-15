@@ -6,9 +6,12 @@
 <meta name="theme-color" content="#8B5E1A">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="شاهي قمرا">
+<meta name="apple-mobile-web-app-title" content="قمرا">
 <title>شاهي قمرا</title>
 <link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAABtklEQVR4nO3SMQ0AIADAMHQgDkOYxgC74WhSATs29ppwNZ4X8C1zkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBOpKJEzGQ1DHgAAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAABtklEQVR4nO3SMQ0AIADAMHQgDkOYxgC74WhSATs29ppwNZ4X8C1zkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBMgfJHCRzkMxBOpKJEzGQ1DHgAAAAAElFTkSuQmCC">
+<meta name="mobile-web-app-capable" content="yes">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
 <!-- Firebase SDK -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
@@ -54,21 +57,7 @@ body.en{font-family:'Cairo',sans-serif}
 .fb-dot.err{background:var(--red)}
 
 /* ── PIN ── */
-#pin{display:none;min-height:100vh;flex-direction:column;align-items:center;
-  justify-content:center;padding:2rem;background:var(--bg)}
-.pin-title{font-size:1rem;font-weight:700;color:var(--gold);margin-bottom:.8rem}
-.pin-disp{font-size:2.5rem;letter-spacing:.7rem;color:var(--gold);min-height:3rem;
-  display:flex;align-items:center;margin:.5rem 0 1.3rem}
-.pin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;width:100%;max-width:260px}
-.pk{background:var(--sur);border:1px solid var(--brd);border-radius:12px;padding:.85rem;
-  font-size:1.45rem;font-weight:700;text-align:center;cursor:pointer;color:var(--txt);
-  transition:all .12s;box-shadow:var(--sh)}
 .pk:active{background:var(--gold);color:#fff;transform:scale(.93)}
-.pk.del{color:var(--red)}
-.pk.empty{visibility:hidden;pointer-events:none}
-.pin-hint{font-size:.7rem;color:var(--muted);margin-top:.5rem}
-.pin-err{color:var(--red);font-size:.8rem;margin-top:.5rem;min-height:1.2rem;font-weight:600}
-.pin-back{background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;margin-top:1.2rem;text-decoration:underline}
 
 /* ── APP SHELL ── */
 #app{display:none;flex-direction:column;height:100dvh;height:100vh}
@@ -365,7 +354,7 @@ textarea.note:focus{outline:none;border-color:var(--gold)}
     <button class="role-btn" onclick="startRole('cashier')">
       <span class="ri">💰</span><span class="rn" id="r-cashier">كاشير</span><span class="rd" id="rd-cashier">الدفع والفاتورة</span>
     </button>
-    <button class="role-btn gold-role" onclick="startRole('admin')">
+    <button class="role-btn gold-role" onclick="startRoleAdmin()">
       <span class="ri">⚙️</span><span class="rn" id="r-admin">الإدارة</span><span class="rd" id="rd-admin">تحكم كامل</span>
     </button>
   </div>
@@ -374,7 +363,6 @@ textarea.note:focus{outline:none;border-color:var(--gold)}
     <span id="fb-txt">جارٍ الاتصال...</span>
   </div>
 </div>
-
 
 <!-- APP -->
 <div id="app">
@@ -769,7 +757,7 @@ function oTotal(o){return o.items.reduce((s,i)=>s+(i.price*i.qty),0);}
 ══════════════════════════════════════════ */
 const S={role:null,screen:null,nav:[],tableId:null,cat:CATS[0].id,cart:{},
   adminTab:'dash',adminCat:'all',search:'',tblFilter:'all',kFilter:'active',
-  payOid:null,payM:'cash',pinBuf:'',
+  payOid:null,payM:'cash',
   optsItem:null,optsSel:{},optsQty:1};
 
 /* ══════════════════════════════════════════
@@ -777,27 +765,20 @@ const S={role:null,screen:null,nav:[],tableId:null,cat:CATS[0].id,cart:{},
 ══════════════════════════════════════════ */
 function showHome(){
   document.getElementById('home').style.display='';
-  document.getElementById('pin').style.display='none';
   document.getElementById('app').style.display='none';
   S.role=null;S.nav=[];S.cart={};stopRefresh();updateFbUI();
 }
+function startRoleAdmin(){
+  S.role='admin';openApp();nav('admin');
+}
 function startRole(r){
-  if(r==='admin'){S.pinBuf='';document.getElementById('pin-disp').textContent='';document.getElementById('pin-err').textContent='';
-    document.getElementById('home').style.display='none';document.getElementById('pin').style.display='flex';return;}
+  if(r==='admin'){startRoleAdmin();return;}
   S.role=r;openApp();
   if(r==='waiter')nav('tables');else if(r==='kitchen')nav('kitchen');else nav('cashier');
 }
-function pk(d){if(S.pinBuf.length>=6)return;S.pinBuf+=d;document.getElementById('pin-disp').textContent='●'.repeat(S.pinBuf.length);if(S.pinBuf.length>=4)chkPin();}
-function pkd(){S.pinBuf=S.pinBuf.slice(0,-1);document.getElementById('pin-disp').textContent='●'.repeat(S.pinBuf.length);}
-function chkPin(){
-  if(S.pinBuf===String(getSettings().pin)){
-    document.getElementById('pin').style.display='none';S.role='admin';openApp();nav('admin');
-  }else{
-    setTimeout(()=>{document.getElementById('pin-err').textContent=T('pinErr');S.pinBuf='';document.getElementById('pin-disp').textContent='';},200);
-  }
-}
+// PIN removed
 function openApp(){
-  document.getElementById('home').style.display='none';document.getElementById('pin').style.display='none';
+  document.getElementById('home').style.display='none';
   const a=document.getElementById('app');a.style.display='flex';a.style.flexDirection='column';
 }
 function nav(screen,params={}){S.nav.push({screen,params});render(screen,params);}
@@ -1309,13 +1290,24 @@ function tAgo(ts){const m=Math.floor((Date.now()-ts)/60000);if(m<1)return lang==
 /* ══════════════════════════════════════════
    INIT
 ══════════════════════════════════════════ */
+// iOS safe area fix
+if(window.navigator.standalone){
+  document.body.style.paddingBottom='env(safe-area-inset-bottom)';
+  const tb=document.querySelector('.topbar');
+  if(tb)tb.style.paddingTop='calc(.6rem + env(safe-area-inset-top))';
+}
 // Restore lang
 const savedLang=LS.get('qamra_lang','ar');
 if(savedLang!=='ar')setLang(savedLang);
 // Firebase init
 initFb();
 // SW
-if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
+if('serviceWorker' in navigator){
+  const swUrl = new URL('./sw.js', location.href).href;
+  navigator.serviceWorker.register(swUrl, {scope:'./'}).then(reg=>{
+    console.log('SW registered:', reg.scope);
+  }).catch(e=>console.log('SW fail:',e));
+}
 // Storage cross-tab
 window.addEventListener('storage',e=>{
   if(e.key==='qamra_orders'){
